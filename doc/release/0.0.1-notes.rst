@@ -1,0 +1,19 @@
+==============================
+pySApprox 0.0.1 Release Notes
+==============================
+
+.. contents::
+
+- initial release
+
+Authors
+=======
+* Holger Nahrstaedt
+
+
+Issues closed for v0.0.1
+------------------------
+
+
+Pull requests for v0.0.1
+------------------------

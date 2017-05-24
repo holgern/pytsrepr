@@ -1,0 +1,44 @@
+# AppVeyor.com is a Continuous Integration service to build and run tests under
+# Windows
+# https://ci.appveyor.com/project/holgern/pysapprox
+
+# This file is built on the template here:
+# http://python-packaging-user-guide.readthedocs.org/en/latest/appveyor/
+
+environment:
+  matrix:
+    - PYTHON: "C:\\Python27"
+    - PYTHON: "C:\\Python27-x64"
+    - PYTHON: "C:\\Python34"
+    - PYTHON: "C:\\Python34-x64"
+      DISTUTILS_USE_SDK: "1"
+    - PYTHON: "C:\\Python35"
+    - PYTHON: "C:\\Python35-x64"
+    - PYTHON: "C:\\Python36"
+    - PYTHON: "C:\\Python36-x64"
+
+build: off
+
+install:
+  - "%PYTHON%\\python.exe -m pip install --upgrade pip"
+  - "%PYTHON%\\python.exe -m pip install --upgrade wheel"
+  - "%PYTHON%\\python.exe -m pip install
+     numpy --cache-dir c:\\tmp\\pip-cache"
+  - "%PYTHON%\\python.exe -m pip install
+     Cython nose coverage matplotlib --cache-dir c:\\tmp\\pip-cache"
+
+test_script:
+  - "%PYTHON%\\python.exe setup.py build --build-lib build\\lib\\"
+  - "%PYTHON%\\Scripts\\nosetests build\\lib --tests pysapprox\\tests"
+
+after_test:
+  - "%PYTHON%\\python.exe setup.py bdist_wheel"
+
+artifacts:
+  # Archive the generated wheel package in the ci.appveyor.com build report.
+  - path: dist\*
+
+cache:
+  # Cache can be manuall cleared like this:
+  # https://github.com/appveyor/ci/issues/207
+  - "c:\\tmp\\pip-cache"
