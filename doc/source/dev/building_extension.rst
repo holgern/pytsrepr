@@ -6,10 +6,10 @@ Building and installing pySApprox
 Installing from source code
 ---------------------------
 
-Go to https://github.com/holgern/pysapprox GitHub project page, fork and clone the
+Go to https://github.com/holgern/pytsrepr GitHub project page, fork and clone the
 repository or use the upstream repository to get the source code::
 
-    git clone https://github.com/holgern/pysapprox.git pysapprox
+    git clone https://github.com/holgern/pytsrepr.git pytsrepr
 
 Activate your Python virtual environment, go to the cloned source directory
 and type the following commands to build and install the package::
@@ -29,10 +29,10 @@ To build docs::
 Installing from source code in Windows
 --------------------------------------
 
-Go to https://github.com/holgern/pysapprox GitHub project page, fork and clone the
+Go to https://github.com/holgern/pytsrepr GitHub project page, fork and clone the
 repository or use the upstream repository to get the source code::
 
-    git clone https://github.com/holgern/pysapprox.git pysapprox
+    git clone https://github.com/holgern/pytsrepr.git pytsrepr
 
 Install Microsoft Visual C++ Compiler for Python 2.7 from https://www.microsoft.com/en-us/download/details.aspx?id=44266
 
@@ -57,11 +57,11 @@ Installing a development version
 
 You can also install directly from the source repository::
 
-    pip install -e git+https://github.com/holgern/pysapprox.git#egg=pysapprox
+    pip install -e git+https://github.com/holgern/pytsrepr.git#egg=pytsrepr
 
 or::
 
-    pip install pysapprox==dev
+    pip install pytsrepr==dev
 
 
 Installing a regular release from PyPi
@@ -69,5 +69,5 @@ Installing a regular release from PyPi
 
 A regular release can be installed with pip or easy_install::
 
-    pip install pysapprox
+    pip install pytsrepr
 

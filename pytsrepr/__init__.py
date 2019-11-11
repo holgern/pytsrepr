@@ -1,8 +1,8 @@
 # flake8: noqa
 
 # Copyright (c) 2017 Holger Nahrstaedt
-# Copyright (c) 2016-2017 The pysapprox Developers
-#                         <https://github.com/holgern/pysapprox>
+# Copyright (c) 2016-2017 The pytsrepr Developers
+#                         <https://github.com/holgern/pytsrepr>
 # See LICENSE for license details.
 
 from __future__ import division, print_function, absolute_import
@@ -11,7 +11,7 @@ from .paa import *
 
 from . import data
 
-from pysapprox.version import version as __version__
+from pytsrepr.version import version as __version__
 from numpy.testing import Tester
 
 __all__ = [s for s in dir() if not s.startswith('_')]

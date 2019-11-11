@@ -1,4 +1,4 @@
-Guidelines for new releases for pysapprox
+Guidelines for new releases for pytsrepr
 ===================================
 vX.X.X refers to the release number
 

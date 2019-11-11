@@ -22,5 +22,5 @@ and open tickets.
 
 
 
-.. _GitHub repository: https://github.com/holgern/pysapprox
-.. _GitHub Issues: https://github.com/holgern/pysapprox/issues
+.. _GitHub repository: https://github.com/holgern/pytsrepr
+.. _GitHub Issues: https://github.com/holgern/pytsrepr/issues

@@ -47,16 +47,16 @@ def git_version():
 
 def get_version_info():
     # Adding the git rev number needs to be done inside
-    # write_version_py(), otherwise the import of pysapprox.version messes
+    # write_version_py(), otherwise the import of pytsrepr.version messes
     # up the build under Python 3.
     FULLVERSION = VERSION
     if os.path.exists('.git'):
         GIT_REVISION = git_version()
-    elif os.path.exists('pysapprox/version.py'):
+    elif os.path.exists('pytsrepr/version.py'):
         # must be a source distribution, use existing version file
         # load it as a separate module to not load pywt/__init__.py
         import imp
-        version = imp.load_source('pysapprox.version', 'pysapprox/version.py')
+        version = imp.load_source('pytsrepr.version', 'pytsrepr/version.py')
         GIT_REVISION = version.git_revision
     else:
         GIT_REVISION = "Unknown"
@@ -67,9 +67,9 @@ def get_version_info():
     return FULLVERSION, GIT_REVISION
 
 
-def write_version_py(filename='pysapprox/version.py'):
+def write_version_py(filename='pytsrepr/version.py'):
     cnt = """
-# THIS FILE IS GENERATED FROM pysapprox SETUP.PY
+# THIS FILE IS GENERATED FROM pytsrepr SETUP.PY
 short_version = '%(version)s'
 version = '%(version)s'
 full_version = '%(full_version)s'
@@ -106,16 +106,16 @@ if __name__ == '__main__':
     write_version_py()
             
     setup(
-        name="pySApprox",
+        name="pyTSRepr",
         maintainer="Holger Nahrstaedt",
         maintainer_email="holger@nahrstaedt.de",
-        url="https://github.com/holgern/pysapprox",
+        url="https://github.com/holgern/pytsrepr",
         license="MIT",
         description="library to approximate data series",
         long_description="""\
-       pysapprox is a python library to approximate data series. 
+e      pytsrepr is a python library to represent data series. 
         """,
-        keywords=["PLA", "APCA", "PAA", "approximation", "SAX"],
+        keywords=["PLA", "APCA", "PAA", "representation", "SAX"],
         classifiers=[
             "Development Status :: 4 - Beta",
             "Intended Audience :: Developers",
@@ -125,17 +125,17 @@ if __name__ == '__main__':
             "Operating System :: OS Independent",
             "Programming Language :: C",
             "Programming Language :: Python",
-            "Programming Language :: Python :: 2.7",
             "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.4",
             "Programming Language :: Python :: 3.5",
             "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.8",
             "Topic :: Software Development :: Libraries :: Python Modules"
         ],
         platforms=["Windows", "Linux", "Solaris", "Mac OS-X", "Unix"],
         version=get_version_info()[0],
-        packages=['pysapprox','pysapprox.data'],
-        package_data={'pysapprox.data': ['*.csv', '*.txt']},
+        packages=['pytsrepr','pytsrepr.data'],
+        package_data={'pytsrepr.data': ['*.csv', '*.txt']},
         test_suite='nose.collector',
         install_requires=["numpy>=1.9.1"],
     )

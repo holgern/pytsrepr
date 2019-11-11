@@ -1,19 +1,19 @@
-pySApprox -Series approximation Toolbox in Python
-=================================================
+pyTSRepr - Time Series representation Toolbox in Python
+=======================================================
 
 pySApprox is a free Open Source  toolbox for approximating data series. 
 
 
   .. sourcecode:: python
 
-    >>> import pysapprox
+    >>> import pytsrepr
     >>> import numpy as np
 
 
 Description
 -------------
 
-pySApprox is a python library to approximate data series.
+pyTSRepr is a python library to represent data series.
 
 
 
@@ -22,7 +22,7 @@ Requirements
 
  It requires:
 
- - Python_ 2.7 or >=3.3
+ - Python_  >=3.4
  - Numpy_ >= 1.6.2
  - scipy
 
@@ -30,7 +30,7 @@ Download
 --------
 
 The most recent *development* version can be found on GitHub at
-https://github.com/holgern/pysapprox.
+https://github.com/holgern/pytsrepr.
 
 Latest release, including source and binary package for Windows, is available
 for download from the `Python Package Index`_ or on the `Releases Page`_.

@@ -6,15 +6,15 @@ Testing
 Continous integration with Travis-CI
 ------------------------------------
 
-The project is using `Travis-CI <https://travis-ci.org/holgern/pysapprox/>`_ service
+The project is using `Travis-CI <https://travis-ci.org/holgern/pytsrepr/>`_ service
 for continous integration and testing.
 
 Current build status is:
 
 .. image::
-    https://secure.travis-ci.org/holgern/pysapprox.png?branch=master
+    https://secure.travis-ci.org/holgern/pytsrepr.png?branch=master
     :alt: Build Status
-    :target: https://secure.travis-ci.org/holgern/pysapprox
+    :target: https://secure.travis-ci.org/holgern/pytsrepr
 
 
 If you are submitting a patch or pull request please make sure it
@@ -26,9 +26,9 @@ Running tests locally
 
 Tests are implemented with `nose`_, so use one of:
 
-    $ nosetests pysapprox
+    $ nosetests pytsrepr
 
-    >>> pysapprox.test()  # doctest: +SKIP
+    >>> pytsrepr.test()  # doctest: +SKIP
     
 Note doctests require `Matplotlib`_ in addition to the usual dependencies.
 
